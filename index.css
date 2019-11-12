@@ -1,279 +1,198 @@
+#container{
+
+}
 body{
   background-color: black;
-  color:white;
-  font-family: sans-serif;
-}
-.container{
-
+  margin:0px;
+  padding:0px;
 }
 
-/* R1 */
-#R{
-
+/* "D" */
+#D{
+  position:relative;
 }
 .rec-left{
-  position:absolute;
-  width:60px;
-  height:300px;
-  left:100px;
-  top:100px;
   background-color: white;
-  z-index: 99;
+  width:45px;
+  height:250px;
+  left:100px;
+  top:40px;
+  position:absolute;
+  z-index: 2;
+}
+.neg-rec-left{
+  background-color: black;
+  position:absolute;
+  width:100px;
+  height:250px;
+  left:0px;
+  top:40px;
+  z-index:3;
+
 }
 .circle-out{
-  position:absolute;;
-  width:250px;
-  height:200px;
-  border-radius: 45%;
   background-color: white;
-  left:100px;
-  top:100px;
-}
-#circle-in{
-  position:absolute;
-  width:140px;
-  height:120px;
+  width:250px;
+  height:250px;
   border-radius: 50%;
-  background-color: black;
+  position:absolute;
   left:45px;
   top:40px;
 }
-.parallelogram {
-     position: absolute;
-     width: 70px;
-     height: 121px;
-     transform: skew(20deg);
-     background-color: white;
-     left:250px;
-     top:279px;
-   }
-
-.circle-in-left{
-  animation-name: moving-left;
-	animation-duration: 2s;
-	animation-iteration-count: 1;
-}
-@keyframes moving-left {
-  from{left:45px;}
-  to{left:500px;}
-}
-/* O */
-#O{
+.circle-in{
+  background-color:black;
+  width:160px;
+  height:160px;
+  border-radius:50%;
   position:absolute;
-  left:415px;
-  top:100px;
+  left:45px;
+  top:45px;
 }
-
-#outer-o{
-  position:absolute;
-  width:250px;
-  height:310px;
+.neg-rec{
   background-color: white;
-  border-radius: 45%;
-}
-#inner-o{
+  width:80px;
+  height:40px;
   position:absolute;
-  width:130px;
-  height:230px;
+}
+#top{
+  left:100px;
+  top:40px;
+}
+#bottom{
+  left:100px;
+  top:250px;
+}
+
+
+
+/* "r" */
+#r{
+  position:relative;
+  left:290px;
+}
+.short-rec{
+  background-color: white;
+  width:45px;
+  height:150px;
+  left:50px;
+  top:140px;
+  position:absolute;
+}
+.half-cir-out{
+  position:absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  left:90px;
+  top:140px;
+}
+.half-cir-in{
+  position:absolute;
   background-color: black;
   border-radius: 50%;
-  left:60px;
+  width: 70px;
+  height: 80px;
+  left:5px;
   top:35px;
 }
-.huge{
-  animation-name: huge;
+.neg-rec-bottom{
+  position:absolute;
+  background-color: black;
+  width: 60px;
+  height: 50px;
+  left:130px;
+  top:195px;
+}
+
+
+/* "i" */
+#I{
+  position:relative;
+  left:490px;
+}
+.rec-bottom{
+  background-color: white;
+  width:45px;
+  height:90px;
+  left:30px;
+  top:200px;
+  position:absolute;
+}
+.cir-top{
+  background-color: white;
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  left:30px;
+  top:130px;
+  position:absolute;
+}
+.down{
+  animation-name: get-down;
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
-@keyframes huge {
-  from{width:130px;
-       height:230px;
-       left:60px;
-       top:35px;}
-  to{width:160px;
-    height:260px;
-    left:45px;
-    top:25px;}
-}
-/* A */
-#A{
-  position:absolute;
-  left:710px;
-  top:70px;
-}
-.tri-out{
-  position:absolute;
-  width: 0;
-  height: 0;
-    border-left: 150px solid transparent;
-    border-right: 150px solid transparent;
-    border-bottom: 340px solid white;
-}
-#tri-in{
-  position:absolute;
-  width: 0;
-  height: 0;
-  left:-95px;
-  top:140px;
-    border-left: 95px solid transparent;
-    border-right: 95px solid transparent;
-    border-bottom: 220px solid black;
-}
-#rec{
-  position:absolute;
-  width:150px;
-  height:40px;
-  top:235px;
-  left:-75px;
-  background-color: white;
-}
-.rec-top{
-  position:absolute;
-  left:100px;
-  top:-15px;
-  z-index: 99;
-  width:100px;
-  height:50px;
-  background-color: black;
-}
-#rec-bottom{
-  position:absolute;
-  width:250px;
-  height:50px;
-  top:340px;
-  left:30px;
-  background-color: black;
-}
-
-/* R */
-#R2{
-  position:absolute;
-  left:995px;
-}
-
-/* instructions */
-.instructions{
-  position:absolute;
-  left:7%;
-  top:60%;
-}
-
-@media only screen and (max-width:600px){
-  /* R1 */
-  .rec-left{
-    width:24px;
-    height:120px;
-    left:40px;
-    top:40px;
-  }
-  .circle-out{
-    width:100px;
-    height:80px;
-    left:40px;
-    top:40px;
-  }
-  #circle-in{
-    width:56px;
-    height:48px;
-    left:18px;
-    top:16px;
-  }
-  .parallelogram {
-       width: 28px;
-       height: 48.4px;
-       left:100px;
-       top:111.6px;
-     }
-
-
-  /* O */
-  #O{
-    left:185px;
-    top:40px;
-  }
-
-  #outer-o{
-    width:100px;
-    height:124px;
-  }
-  #inner-o{
-    width:52px;
-    height:92px;
-    left:23px;
-    top:14px;
-  }
-  .huge{
-    animation-name: huge;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-  }
-  @keyframes huge {
-    from{width:52px;
-         height:92px;
-         left:24px;
-         top:14px;}
-    to{width:64px;
-      height:104px;
-      left:18px;
-      top:10px;}
-  }
-
-  /* A */
-  #A{
-    left:40px;
-    top:180px;
-  }
-  .tri-out{
-    position:absolute;
-    width: 0;
-    height: 0;
-      border-left: 55px solid transparent;
-      border-right: 55px solid transparent;
-      border-bottom: 130px solid white;
-  }
-  #tri-in{
-    left:-72px;
-    top:56px;
-      border-left: 70px solid transparent;
-      border-right: 70px solid transparent;
-      border-bottom: 40px solid black;
-  }
-  #rec{
-    width:60px;
-    height:24px;
-    top:94px;
-    left:-30px;
-  }
-  .rec-top{
-    position:absolute;
-    left:40px;
-    top:-6px;
-    width:40px;
-    height:20px;
-  }
-  #rec-bottom{
-    width:200px;
-    height:180px;
+@keyframes get-down {
+  from{
     top:130px;
-    left:-20px;
   }
+  to{
+    top:800px;
+  }
+}
+/* "p" */
+#p{
+  position:relative;
+  left:580px;
+}
+.rec-left-p{
+  background-color: white;
+  width:45px;
+  height:250px;
+  left:30px;
+  top:190px;
+  position:absolute;
+}
+.cir-out{
+  position:absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 120px;
+  height: 140px;
+  left:60px;
+  top:180px;
+}
+.cir-neg-in{
+  position:absolute;
+  background-color: black;
+  border-radius: 50%;
+  width:50px;
+  height:80px;
+  left:35px;
+  top:30px;
+}
 
-  /* R */
-  #R2{
-    left:150px;
-    top:150px;
-  }
 
-  /* instructions */
-  .instructions{
-    position:absolute;
-    left:7%;
-    top:60%;
-  }
-  h1{
-    font-size: 24px;
-  }
-  p{
-    font-size: 14px;
-  }
+/* waterdrop */
+.tri-top{
+  width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid white;
+  position:absolute;
+  left:610px;
+  top:500px;
+}
+
+}
+.cir-bottom{
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  position:absolute;
+  background-color: white;
+  left:610px;
+  top:530px;
 }
