@@ -15,7 +15,7 @@ button.addEventListener('mouseover', Drip);
       //creating a Div that is represented by variable dropBottom
       var dropBottom = document.createElement('div');
       //add class 'cir-bottom'to this div
-      dropBottom.classList.add('cir-bottom');
+      dropBottom.className = 'cir-bottom';
       //get the element that has the id of 'container'
       var container = document.getElementById('container');
       //assign iteration number as id for variable dropTop
@@ -24,8 +24,6 @@ button.addEventListener('mouseover', Drip);
       container.appendChild(dropBottom);
       //define that the vertical distance between each bottom part of the drop is 150px
       dropBottom.style.top = 530 + 150 * i + 'px';
-
-
 
       //creating a Div that is represented by variable dropTop
       var dropTop = document.createElement('div');
