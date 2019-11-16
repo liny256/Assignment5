@@ -1,12 +1,10 @@
 //add dripping waterdrop
 
+//interaction 1:
 //creating a Div that is represented by variable dropBottom
 var button = document.getElementById('p');
 //make variable button listen to mouse hover, if mouse hovered over the button, then do function Drip
 button.addEventListener('mouseover', Drip);
-
-// var cirI=document.getElementsByClassName('cir-top');
-// cirI.addEventListener('click',)
 
 
   function Drip() {
@@ -45,3 +43,29 @@ button.addEventListener('mouseover', Drip);
       }
     }
   }
+
+
+
+//interaction 2
+var cirTop= document.getElementById('cir-top');
+cirTop.addEventListener('click',DownOrBlue);
+cirTop.addEventListener('mouseup',BacktoPos);
+
+function DownOrBlue(){
+  var random=Math.floor(Math.random()*10);
+  console.log(Math.floor(Math.random()*10));
+  if (random<5) {
+    cirTop.style.backgroundColor='#67aceb';
+    cirTop.className='glow';
+  }
+  else {
+    cirTop.className='down';
+  }
+}
+
+function BacktoPos(){
+  cirTop.style.backgroundColor='white';
+  cirTop.className-='glow';
+}
+
+//interaction 3
