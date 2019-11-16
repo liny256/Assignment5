@@ -39,7 +39,7 @@ body{
   left:45px;
   top:40px;
 }
-.circle-in{
+#circle-in{
   background-color:black;
   width:160px;
   height:160px;
@@ -53,6 +53,7 @@ body{
   width:80px;
   height:40px;
   position:absolute;
+  z-index:3;
 }
 #top{
   left:100px;
@@ -62,8 +63,45 @@ body{
   left:100px;
   top:250px;
 }
-
-
+/* this is the code for filling the D */
+.rec-b-top{
+  background-color: black;
+  width:30px;
+  height:80px;
+  position: absolute;
+  left: 145px;
+  top:230px;
+  animation-name: leak-age;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  z-index: -1;
+}
+.rec-new{
+  background-color: white;
+  width:30px;
+  height:45px;
+  position: absolute;
+  left: 145px;
+  top:245px;
+  z-index: 999;
+}
+.rec-fix{
+  background-color: black;
+  width:30px;
+  height:20px;
+  position:absolute;
+  left: 145px;
+  top: 290px;
+  z-index: 1000;
+}
+@keyframes leak-age {
+  from{
+    height:80px;
+  }
+  to{
+    height:800px;
+  }
+}
 
 /* "r" */
 #r{
@@ -206,4 +244,185 @@ body{
   background-color: white;
   left:610px;
   top:530px;
+}
+
+
+
+
+
+@media only screen and (max-width:600px){
+  /* "D" */
+  .rec-left{
+    width:22.5px;
+    height:125px;
+    left:80px;
+    top:80px;
+  }
+  .neg-rec-left{
+    width:50px;
+    height:125px;
+    left:30px;
+    top:80px;
+  }
+  .circle-out{
+    width:125px;
+    height:125px;
+    left:50px;
+    top:80px;
+  }
+  #circle-in{
+    width:80px;
+    height:80px;
+    left:25px;
+    top:25px;
+  }
+  .neg-rec{
+    width:30px;
+    height:20px;
+  }
+  #top{
+    left:90px;
+    top:80px;
+  }
+  #bottom{
+    left:90px;
+    top:185px;
+  }
+  /* this is the code for filling the D */
+  .rec-b-top{
+    width:15px;
+    height:60px;
+    left:102.5px;
+    top:160px;
+    animation-name: leak-age;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+  }
+  .rec-new{
+    width:15px;
+    height:20px;
+    left:102.5px;
+    top:85px;
+  }
+  .rec-fix{
+    width:30px;
+    height:20px;
+    left: 102.5px;
+    top: 205px;
+  }
+  @keyframes leak-age {
+    from{
+      height:60px;
+    }
+    to{
+      height:800px;
+    }
+  }
+
+  /* "r" */
+  #r{
+    left:140px;
+  }
+  .short-rec{
+    width:22.5px;
+    height:80px;
+    left:50px;
+    top:125px;
+  }
+  .half-cir-out{
+    width: 50px;
+    height: 50px;
+    left:70px;
+    top:125px;
+  }
+  .half-cir-in{
+    width: 40px;
+    height: 40px;
+    left:3px;
+    top:15px;
+  }
+  .neg-rec-bottom{
+    width: 30px;
+    height: 25px;
+    left:100px;
+    top:150px;
+  }
+
+
+  /* "i" */
+  #I{
+    left:240px;
+  }
+  #rec-bottom{
+    width:22.5px;
+    height:45px;
+    left:30px;
+    top:160px;
+  }
+  #cir-top{
+    width:22.5px;
+    height:22.5px;
+    left:30px;
+    top:120px;
+  }
+  .glow{
+    animation-name: shine;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes shine {
+    from{
+      box-shadow: none;
+    }
+    to{box-shadow: 0px 0px 5px white;
+    }
+  }
+  .down{
+    animation-name: get-down;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+  }
+  @keyframes get-down {
+    from{
+      top:120px;
+    }
+    to{
+      top:800px;
+    }
+  }
+  /* "p" */
+  #p{
+    left:290px;
+  }
+  .rec-left-p{
+    width:22.5px;
+    height:125px;
+    left:30px;
+    top:140px;
+  }
+  .cir-out{
+    width: 60px;
+    height: 70px;
+    left:40px;
+    top:140px;
+  }
+  .cir-neg-in{
+    width:25px;
+    height:40px;
+    left:20px;
+    top:15px;
+  }
+
+
+  /* waterdrop */
+  .tri-top{
+    left:300px;
+    top:200px;
+  }
+
+  .cir-bottom{
+    left:300px;
+    top:230px;
+  }
+
 }
